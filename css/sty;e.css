@@ -1,0 +1,140 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300&family=IBM+Plex+Sans:wght@300&family=Metal+Mania&family=Quicksand&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+*{
+    box-sizing: border-box;
+}
+
+header{
+    display: inline;
+}
+body{
+    font-family: 'Quicksand', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+main {
+    overflow: auto;
+    padding: 20px;
+    display: flex;
+    gap: 1.5rem;
+  }
+#content{
+    float: left;
+    width: 75%;
+    flex: 5;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 1rem 2rem;
+}
+aside{
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+    flex: 1;
+}
+
+li{
+    display: inline;
+    margin-left: 5px;
+}
+h2, h3{
+    color: #c6002e
+}
+
+footer {
+    padding: 20px;
+    color: white;
+    background-color: #c6002e;
+    text-align: center;
+  }
+nav {
+    background-color: #d94063;
+    padding: 5px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+ }
+
+nav ul {
+    padding-inline: 4rem;
+    display: flex;
+    gap: 2rem;
+}
+
+nav, li{
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 20px;
+}
+nav a{
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    color: white;
+}
+nav a:hover{
+    font-weight: bold;
+}
+
+.profile {
+    text-align: center;
+}
+.profile img{
+    width: 200px;
+}
+
+.featured-image {
+    width:30%;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+  }
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.jumbotron {
+    font-size: 20px;
+    padding: 60px;
+    background-color: #c6002e;
+    text-align: center;
+    color: white;
+}
+.flx{
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width: 1000px) {
+    #content, aside {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    main {
+      flex-flow: column nowrap;
+    }
+    main aside {
+      align-self: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    nav ul {
+      justify-content: center;
+    }
+   
+    main aside {
+      align-self: stretch;
+    }
+  }
